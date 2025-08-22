@@ -17,6 +17,7 @@ export async function api<T>(path: string): Promise<T> {
     });
 
     return res.data;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err: any) {
     // Axios throws automatically on non-2xx, mimic your old Error(await res.text())
     throw new Error(
